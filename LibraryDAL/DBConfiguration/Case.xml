@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Querys>
+
+  <Query name="Insert_Case">
+    <Parameters>
+      <Parameter type="string">CaseName</Parameter>
+      <Parameter type="string">CreatTime</Parameter>
+    </Parameters>
+    <QuerySQL>
+      insert into t_Case ([CaseName],[CreatTime]) values(@CaseName,@CreatTime)
+    </QuerySQL>
+  </Query>
+
+  <Query name="Select_Case">
+    <Parameters>
+      <Parameter type="string"></Parameter>
+    </Parameters>
+    <QuerySQL>SELECT * FROM t_Case</QuerySQL>
+  </Query>
+
+  <Query name="Delete_Case">
+    <Parameters>
+      <Parameter type="string">CaseID</Parameter>
+    </Parameters>
+    <QuerySQL>DELETE FROM t_Case WHERE CaseID=@CaseID</QuerySQL>
+  </Query>
+
+
+  <Query name="">
+    <Parameters>
+      <Parameter type="string"></Parameter>
+    </Parameters>
+    <QuerySQL></QuerySQL>
+  </Query>
+
+
+  <Query name="">
+    <Parameters>
+      <Parameter type="string"></Parameter>
+    </Parameters>
+    <QuerySQL></QuerySQL>
+  </Query>
+
+</Querys>

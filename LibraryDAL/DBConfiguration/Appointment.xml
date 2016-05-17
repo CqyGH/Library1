@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Querys>
+    <Query name="Insert_Appointment">
+        <Parameters>
+            <Parameter type="string">StudentID</Parameter>
+            <Parameter type="string">AppointmentTime</Parameter>
+            <Parameter type="string">BookName</Parameter>
+            <Parameter type="string">ReadOver</Parameter>
+        </Parameters>
+        <QuerySQL>insert into t_Appointment ([StudentID],[UserName],[AppointmentTime],[BookName],[ReadOver]) select @StudentID,[UserName]=(select [UserName] from t_User where [StudentID]= @StudentID),@AppointmentTime,@BookName,@ReadOver</QuerySQL>
+    </Query>
+    
+    <Query name="Select_Appointment_Page">
+        <Parameters>
+            <Parameter type=""></Parameter>
+        </Parameters>
+        <QuerySQL>
+            SELECT * FROM (SELECT ROW_NUMBER() OVER (ORDER BY [AppointmentTime] DESC) AS ROWNUM,* FROM (select [AppointmentID],[StudentID],[UserName],[AppointmentTime],[BookName],[reply],[ReadOver] from t_Appointment  )as de WHERE  [ReadOver]=0 {2}) AS t WHERE t.ROWNUM>{0} AND t.ROWNUM&lt;={1}
+        </QuerySQL>
+    </Query>
+
+  <Query name="Select_Appointment_Page_ReadOver">
+    <Parameters>
+      <Parameter type=""></Parameter>
+    </Parameters>
+    <QuerySQL>
+      SELECT * FROM (SELECT ROW_NUMBER() OVER (ORDER BY [AppointmentTime] DESC) AS ROWNUM,* FROM (select [AppointmentID],[StudentID],[UserName],[AppointmentTime],[BookName],[reply],[ReadOver] from t_Appointment  )as de WHERE  1=1 {2}) AS t WHERE t.ROWNUM>{0} AND t.ROWNUM&lt;={1}
+    </QuerySQL>
+  </Query>
+
+    <Query name="Select_Appointment_Count">
+        <Parameters>
+            <Parameter type=""></Parameter>
+        </Parameters>
+        <QuerySQL>
+            select COUNT(AppointmentID) from t_Appointment where 1=1 and [ReadOver]=0  {0}
+        </QuerySQL>
+    </Query>
+
+  <Query name="Select_Appointment_Count_ReadOver">
+    <Parameters>
+      <Parameter type=""></Parameter>
+    </Parameters>
+    <QuerySQL>
+      select COUNT(AppointmentID) from t_Appointment where 1=1  {0}
+    </QuerySQL>
+  </Query>
+
+    <Query name="Delete_Appointment">
+        <Parameters>
+            <Parameter type="string">AppointmentID</Parameter>
+        </Parameters>
+        <QuerySQL>delete from t_Appointment where [AppointmentID]=@AppointmentID</QuerySQL>
+    </Query>
+
+    <Query name="Update_Appointment_ReadOver">
+        <Parameters>
+            <Parameter type="string">ReadOver</Parameter>
+            <Parameter type="string">AppointmentID</Parameter>
+        </Parameters>
+        <QuerySQL>
+
+            UPDATE t_Appointment set [ReadOver]=@ReadOver where [AppointmentID]=@AppointmentID
+        </QuerySQL>
+    </Query>
+
+    <Query name="Update_Appointment_Reply">
+        <Parameters>
+            <Parameter type="string">reply</Parameter>
+            <Parameter type="string">AppointmentID</Parameter>
+        </Parameters>
+        <QuerySQL>  UPDATE t_Appointment set [reply]=@reply where [AppointmentID]=@AppointmentID</QuerySQL>
+    </Query>
+
+    <Query name="Select_Appointment_AppointmentID">
+        <Parameters>
+            <Parameter type="string">AppointmentID</Parameter>
+        </Parameters>
+        <QuerySQL>Select * from t_Appointment where AppointmentID=@AppointmentID</QuerySQL>
+    </Query>
+    
+</Querys>

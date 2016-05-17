@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Querys>
+    <Query name="Select_All_Book">
+        <Parameters>
+        </Parameters>
+        <QuerySQL>
+          SELECT * FROM (SELECT ROW_NUMBER() OVER (ORDER BY [PublishTime] DESC) AS ROWNUM,* FROM (select [BookID],[PublishTime],[ISBN],[BookType]=(select [TypeName] from t_BookType as t where t.BookTypeID=b.BookType),[BookName],[BookAuthor],[Publisher],[Price],[BookCase]=(select [CaseName] from t_Case as c where c.CaseID=b.BookCase),[Extant],[Stock],[Appointment],[BookLoan],[Logout],[Summary] from t_Book as b )as de WHERE 1=1 {2}) AS t WHERE t.ROWNUM>{0} AND t.ROWNUM&lt;={1}
+        </QuerySQL>
+    </Query>
+
+    <Query name="Insert_Book">
+        <Parameters>
+            <Parameter type="string">ISBN</Parameter>
+            <Parameter type="string">BookType</Parameter>
+            <Parameter type="string">BookName</Parameter>
+            <Parameter type="string">BookAuthor</Parameter>
+            <Parameter type="string">Publisher</Parameter>
+            <Parameter type="string">Price</Parameter>
+            <Parameter type="string">BookCase</Parameter>
+            <Parameter type="string">Extant</Parameter>
+            <Parameter type="string">Stock</Parameter>
+            <Parameter type="string">Appointment</Parameter>
+            <Parameter type="string">BookLoan</Parameter>
+            <Parameter type="string">Logout</Parameter>
+            <Parameter type="string">Summary</Parameter>
+            <Parameter type="string">PublishTime</Parameter>
+        </Parameters>
+        <QuerySQL>
+            insert into t_Book ([ISBN],[BookType],[BookName],[BookAuthor],[Publisher],[Price],[BookCase],[Extant],[Stock],[Appointment],[BookLoan],[Logout],[Summary],[PublishTime]) select @ISBN,BookType=(select [BookTypeID] from  t_BookType where [TypeName]=@BookType),@BookName,@BookAuthor,@Publisher,@Price,[BookCase]=(select [CaseID] from dbo.t_Case  where [CaseName]=@BookCase),@Extant,@Stock,@Appointment,@BookLoan,@Logout,@Summary,@PublishTime
+        </QuerySQL>
+    </Query>
+
+    <Query name="Delete_Book">
+        <Parameters>
+            <Parameter type="string">BookID</Parameter>
+        </Parameters>
+        <QuerySQL>
+            delete from t_Book where [BookID]=@BookID
+        </QuerySQL>
+    </Query>
+
+    <Query name="Update_Book">
+        <Parameters>
+            <Parameter type="string">ISBN</Parameter>
+            <Parameter type="string">BookName</Parameter>
+            <Parameter type="string">BookType</Parameter>
+            <Parameter type="string">BookAuthor</Parameter>
+            <Parameter type="string">Publisher</Parameter>
+            <Parameter type="string">Price</Parameter>
+            <Parameter type="string">Summary</Parameter>
+            <Parameter type="string">BookCase</Parameter>
+            <Parameter type="string">Stock</Parameter>
+            <Parameter type="string">BookID</Parameter>
+        </Parameters>
+        <QuerySQL>
+            update t_Book set [ISBN]=@ISBN,[BookName]=@BookName,[BookType]=(select [BookTypeID] from   t_BookType where TypeName=@BookType),[BookAuthor]=@BookAuthor,[Publisher]=@Publisher,[Price]=@Price,[Summary]=@Summary,[BookCase]=(select [CaseID] from  t_Case  where CaseName=@BookCase),[Stock]=@Stock where [BookID]=@BookID
+        </QuerySQL>
+    </Query>
+
+    <Query name="Select_Book_Count">
+        <Parameters>
+            <Parameter type="string"></Parameter>
+        </Parameters>
+        <QuerySQL>  select COUNT([BookID]) from t_Book where 1=1 </QuerySQL>
+    </Query>
+
+    <Query name="Select_Book_Count_BookName">
+        <Parameters>
+            <Parameter type="string">BookName</Parameter>
+        </Parameters>
+        <QuerySQL>  select COUNT([BookID]) from t_Book where 1=1 AND  BookName like @BookName</QuerySQL>
+    </Query>
+
+    <Query name="Select_Book_Count_BookAuthor">
+        <Parameters>
+            <Parameter type="string">BookAuthor</Parameter>
+        </Parameters>
+        <QuerySQL>  select COUNT([BookID]) from t_Book where 1=1 and  BookAuthor like @BookAuthor</QuerySQL>
+    </Query>
+
+
+    <Query name="Select_Book_BookID">
+        <Parameters>
+            <Parameter type="string">BookID</Parameter>
+        </Parameters>
+        <QuerySQL>
+            select [Extant],[Appointment],[PublishTime],[Logout],[BookLoan],[ISBN], [BookName], [BookType]=(select [TypeName] from  t_BookType as b2 where b1.BookType=b2.BookTypeID), [BookAuthor], [Publisher], [Price], [Summary], [BookCase]=(select [CaseName] from  t_Case as b2 where b1.BookCase=b2.CaseID), [Stock], [BookID] from t_Book as b1 where BookID=@BookID
+        </QuerySQL>
+    </Query>
+
+    <Query name="Update_Book_UserBorrow">
+        <Parameters>
+            <Parameter type="string">ISBN</Parameter>
+        </Parameters>
+        <QuerySQL>
+            update t_Book set BookLoan=BookLoan+1 where ISBN=@ISBN
+            update t_Book set Extant=Extant-1 where ISBN=@ISBN
+        </QuerySQL>
+    </Query>
+  
+  <Query name="Select_Book_ISBN">
+    <Parameters>
+      <Parameter type="string">ISBN</Parameter>
+    </Parameters>
+    <QuerySQL>
+      select * from t_Book where ISBN=@ISBN
+    </QuerySQL>
+  </Query>
+
+  <Query name="Update_Book_Return">
+    <Parameters>
+      <Parameter type="string">ISBN</Parameter>
+    </Parameters>
+    <QuerySQL>
+      update t_Book set Extant=Extant+1 where ISBN=@ISBN
+    </QuerySQL>
+  </Query>
+
+  <Query name="Select_Top15_Book">
+    <Parameters>
+    </Parameters>
+    <QuerySQL>
+      select top 15 [BookName],[BookLoan] from t_Book  order by [BookLoan] desc
+    </QuerySQL>
+  </Query>
+
+  <Query name="Update_Book_Logout">
+    <Parameters>
+      <Parameter type="string">BookID</Parameter>
+      <Parameter type="string">Logout</Parameter>
+    </Parameters>
+    <QuerySQL>
+      update t_Book set Logout=@Logout where BookID=@BookID
+    </QuerySQL>
+  </Query>
+
+
+  <Query name="Select_Book_BookLoan_All">
+    <Parameters>
+      <Parameter type="string">BookID</Parameter>
+      <Parameter type="string">Logout</Parameter>
+    </Parameters>
+    <QuerySQL>
+      select sum(BookLoan) from dbo.t_Book
+    </QuerySQL>
+  </Query>
+</Querys>
+

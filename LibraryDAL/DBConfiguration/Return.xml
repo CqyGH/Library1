@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Querys>
+  <Query name="Insert_Return">
+    <Parameters>
+      <Parameter type="string">StudentID</Parameter>
+      <Parameter type="string">UserName</Parameter>
+      <Parameter type="string">BookName</Parameter>
+      <Parameter type="string">ReturnTime</Parameter>
+      <Parameter type="string">Confirm</Parameter>
+      <Parameter type="string">ISBN</Parameter>
+    </Parameters>
+    <QuerySQL>
+      INSERT INTO [t_Return] ([StudentID],[UserName],[BookName],[ReturnTime],[Confirm],[ISBN]) VALUES (@StudentID,@UserName,@BookName,@ReturnTime,@Confirm,@ISBN)
+    </QuerySQL>
+  </Query>
+
+  <Query name="">
+    <Parameters>
+      <Parameter type="string"></Parameter>
+    </Parameters>
+    <QuerySQL></QuerySQL>
+  </Query>
+
+  <Query name="">
+    <Parameters>
+      <Parameter type="string"></Parameter>
+    </Parameters>
+    <QuerySQL></QuerySQL>
+  </Query>
+
+  <Query name="">
+    <Parameters>
+      <Parameter type="string"></Parameter>
+    </Parameters>
+    <QuerySQL></QuerySQL>
+  </Query>
+
+  <Query name="">
+    <Parameters>
+      <Parameter type="string"></Parameter>
+    </Parameters>
+    <QuerySQL></QuerySQL>
+  </Query>
+
+  <Query name="">
+    <Parameters>
+      <Parameter type="string"></Parameter>
+    </Parameters>
+    <QuerySQL></QuerySQL>
+  </Query>
+
+  <Query name="">
+    <Parameters>
+      <Parameter type="string"></Parameter>
+    </Parameters>
+    <QuerySQL></QuerySQL>
+  </Query>
+
+  <Query name="">
+    <Parameters>
+      <Parameter type="string"></Parameter>
+    </Parameters>
+    <QuerySQL></QuerySQL>
+  </Query>
+
+  <Query name="">
+    <Parameters>
+      <Parameter type="string"></Parameter>
+    </Parameters>
+    <QuerySQL></QuerySQL>
+  </Query>
+
+  <Query name="">
+    <Parameters>
+      <Parameter type="string"></Parameter>
+    </Parameters>
+    <QuerySQL></QuerySQL>
+  </Query>
+
+  <Query name="">
+    <Parameters>
+      <Parameter type="string"></Parameter>
+    </Parameters>
+    <QuerySQL></QuerySQL>
+  </Query>
+</Querys>

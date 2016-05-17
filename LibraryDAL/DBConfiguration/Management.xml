@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Querys>
+  <Query name="InsertManagement">
+    <Parameters>
+      <Parameter type="string">ManagementName</Parameter>
+      <Parameter type="string">Sex</Parameter>
+      <Parameter type="string">Education</Parameter>
+      <Parameter type="string">Birthday</Parameter>
+      <Parameter type="string">Phone</Parameter>
+      <Parameter type="string">ManagementAddress</Parameter>
+      <Parameter type="string">PWD</Parameter>
+      <Parameter type="string">Remark</Parameter>
+      <Parameter type="string">ManagePermission</Parameter>
+      
+    </Parameters>
+    <QuerySQL>insert into t_Management ([ManagementName],[Sex],[Education],[Birthday],[Phone],[ManagementAddress],[PWD],[Remark],ManagePermission) values(@ManagementName,@Sex,@Education,@Birthday,@Phone,@ManagementAddress,@PWD,@Remark,@ManagePermission)</QuerySQL>
+  </Query>
+
+  <Query name="SelectManage">
+    <Parameters>
+    </Parameters>
+    <QuerySQL>select * from t_Management where 1=1 {0}</QuerySQL>
+  </Query>
+
+  <Query name="Update_Management_PWD">
+    <Parameters>
+      <Parameter type="string">PWD</Parameter>
+      <Parameter type="string">ManagementID</Parameter>
+    </Parameters>
+    <QuerySQL>update t_Management set PWD=@PWD where ManagementID=@ManagementID</QuerySQL>
+  </Query>
+
+  <Query name="SelectManegePage">
+    <Parameters>
+    </Parameters>
+    <QuerySQL>select * from (select ROW_NUMBER() over (order by [ManagementID] desc)as ROWNUM,* from(select * from t_Management)as de where 1=1 ) AS t WHERE t.ROWNUM>{0} AND t.ROWNUM&lt;={1}</QuerySQL>
+  </Query>
+
+  <Query name="SelectManagePageCount">
+    <Parameters>
+      <Parameter type="string"></Parameter>
+    </Parameters>
+    <QuerySQL>select count(ManagementID) from t_Management</QuerySQL>
+  </Query>
+
+  <Query name="SelectManagePageCount">
+    <Parameters>
+      <Parameter type="string"></Parameter>
+    </Parameters>
+    <QuerySQL>select count(ManagementID) from t_Management</QuerySQL>
+  </Query>
+
+  <Query name="DeleteManage">
+    <Parameters>
+      <Parameter type="string">ManagementID</Parameter>
+    </Parameters>
+    <QuerySQL>delete from t_Management where ManagementID=@ManagementID</QuerySQL>
+  </Query>
+
+
+  <Query name="UpdateManageInfo">
+    <Parameters>
+      <Parameter type="string">ManagementID</Parameter>
+      <Parameter type="string">ManagementName</Parameter>
+      <Parameter type="string">Sex</Parameter>
+      <Parameter type="string">Education</Parameter>
+      <Parameter type="string">Birthday</Parameter>
+      <Parameter type="string">Phone</Parameter>
+      <Parameter type="string">ManagementAddress</Parameter>
+      <Parameter type="string">Remark</Parameter>
+    </Parameters>
+    <QuerySQL>
+      UPDATE [t_Management] SET [ManagementName] =@ManagementName,[Sex] =@Sex ,[Education] =@Education,[Birthday] =@Birthday ,[Phone] =@Phone ,[ManagementAddress] =@ManagementAddress ,[Remark] =@Remark   WHERE ManagementID=@ManagementID
+    </QuerySQL>
+  </Query>
+</Querys>

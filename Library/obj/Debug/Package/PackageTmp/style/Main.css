@@ -1,0 +1,85 @@
+﻿body
+{
+    margin:0;
+    padding:0;
+    }
+.main
+{
+    float:left;
+    display:table;
+    width:100%;
+    height:100%;
+    min-width:1024px;
+    min-height:585px;
+    margin:0 auto;
+    text-align:center;
+    }
+    .main .registerFrame
+    {
+        display:table-cell;
+        vertical-align:middle;
+        margin-left:auto;
+        margin-right:auto;
+        width:999px;
+        height:349px;
+        }
+        .main .registerFrame .titleEnglish
+        {
+            width:100%;
+            height:70%;
+            line-height:70px;
+            color:#000000;
+            font-size:36px;
+            font-family:Verdana, Geneva, Sans-Serif;
+            }
+        .main .registerFrame .titleChinese
+        {
+            width:100%;
+            height:80%;
+            line-height:80px;
+            color:#38a5ce;
+            font-size:36px;
+            font-family:Verdana, Geneva, Sans-Serif;
+            }
+        .main .registerFrame .inputBox
+        {
+            float:none;
+            width:352px;
+            height:190px;
+            margin:0 auto;
+            text-align:center;
+            }
+            .main .registerFrame .inputBox .box
+            {
+                float:none;
+                width:352px;
+                height:40px;
+                margin-top:10px;
+                background-color:#ffffff;
+                border:#d8d8d8 1px solid;
+                }
+                 .main .registerFrame .inputBox .box .textBox
+                 {
+                     border-style:none;
+                     width:349px;
+                     height:37px;
+                     line-height:37px;
+                     font-size:18px;
+                     }
+                  .main .registerFrame .inputBox .box .checkBox
+                  {
+                      float:left;
+                      }
+                       .main .registerFrame .inputBox .box .checkBox .checkBox1
+                       {
+                           width:20px;
+                           }
+             .main .registerFrame .registerButton
+             {
+                 width:132px;
+                 height:42px;
+                 margin:auto;
+                 }
+                 
+        
+              

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Querys>
+  <Query name="Insert_Annunciate">
+    <Parameters>
+      <Parameter type="string">Information</Parameter>
+      <Parameter type="string">PublishTime</Parameter>
+      <Parameter type="string">Display</Parameter>
+      <Parameter type="string">Title</Parameter>
+    </Parameters>
+    <QuerySQL>insert into t_Annunciate ([Information],[PublishTime],[Display],[Title] ) values(@Information,@PublishTime,@Display,@Title)</QuerySQL>
+  </Query>
+
+  <Query name="Select_Annunciate">
+    <Parameters>
+      <Parameter type="string"></Parameter>
+    </Parameters>
+    <QuerySQL>select [AnnunciateID],[Information],[PublishTime],[Display],[Title]  from t_Annunciate where 1=1 {0}</QuerySQL>
+  </Query>
+
+  <Query name="Select_Annunciate_Count_Judge">
+    <Parameters>
+      <Parameter type="string"></Parameter>
+    </Parameters>
+    <QuerySQL>select count([AnnunciateID])  from t_Annunciate where  Display=1</QuerySQL>
+  </Query>
+
+  <Query name="Update_Annunciate_Information">
+    <Parameters>
+      <Parameter type="string">AnnunciateID</Parameter>
+      <Parameter type="string">Information</Parameter>
+      <Parameter type="string">Title</Parameter>
+    </Parameters>
+    <QuerySQL>update t_Annunciate set Information=@Information,Title=@Title where AnnunciateID=@AnnunciateID</QuerySQL>
+  </Query>
+
+  <Query name="Update_Annunciate_Display">
+    <Parameters>
+      <Parameter type="string">AnnunciateID</Parameter>
+      <Parameter type="string">Display</Parameter>
+    </Parameters>
+    <QuerySQL>update t_Annunciate set Display=@Display   where AnnunciateID=@AnnunciateID</QuerySQL>
+  </Query>
+ 
+
+  <Query name="Delete_Annunciate">
+    <Parameters>
+      <Parameter type="string">AnnunciateID</Parameter>
+    </Parameters>
+    <QuerySQL>delete from t_Annunciate where AnnunciateID=@AnnunciateID</QuerySQL>
+  </Query>
+
+  <Query name="Update_Annunciate_Display">
+    <Parameters>
+      <Parameter type="string">Display</Parameter>
+      <Parameter type="string">AnnunciateID</Parameter>
+    </Parameters>
+    <QuerySQL>update t_Annunciate set Display=@Display where AnnunciateID=@AnnunciateID</QuerySQL>
+  </Query>
+
+  <Query name="">
+    <Parameters>
+      <Parameter type="string"></Parameter>
+    </Parameters>
+    <QuerySQL></QuerySQL>
+  </Query>
+
+  <Query name="">
+    <Parameters>
+      <Parameter type="string"></Parameter>
+    </Parameters>
+    <QuerySQL></QuerySQL>
+  </Query>
+
+  <Query name="">
+    <Parameters>
+      <Parameter type="string"></Parameter>
+    </Parameters>
+    <QuerySQL></QuerySQL>
+  </Query>
+
+  <Query name="">
+    <Parameters>
+      <Parameter type="string"></Parameter>
+    </Parameters>
+    <QuerySQL></QuerySQL>
+  </Query>
+</Querys>

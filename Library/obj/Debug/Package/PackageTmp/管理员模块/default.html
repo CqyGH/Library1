@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+ <head>
+<title></title>
+<script src='http://code.jquery.com/jquery-1.11.0-beta1.js'></script>
+ </head>
+ <body>
+ <table border = "1" id='tbodyID'> 
+<tr> 
+ <td><input type='checkbox' ></td>
+  <td>1</td>
+   <td>2</td>
+</tr> 
+<tr> 
+ <td><input type='checkbox' ></td>
+  <td>3</td>
+   <td>4</td>
+</tr> 
+<tr> 
+ <td><input type='checkbox' ></td>
+  <td>5</td>
+   <td>6</td>
+</tr> 
+</table> 
+<input type=button value='选择' onclick='ck()'>
+<script>
+    function ck() {
+        var tbodyObj = document.getElementById('tbodyID');
+        $("table :checkbox").each(function (key, value) {
+            if ($(value).prop('checked')) {
+                alert(tbodyObj.rows[key].cells[1].innerHTML);
+                alert(tbodyObj.rows[key].cells[2].innerHTML);
+            }
+        })
+    }
+</script>
+ </body>
+ </html>

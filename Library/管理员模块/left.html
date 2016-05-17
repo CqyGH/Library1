@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="js/jquery.js"></script>
+
+<script type="text/javascript">
+$(function(){	
+	//导航切换
+	$(".menuson li").click(function(){
+		$(".menuson li.active").removeClass("active")
+		$(this).addClass("active");
+	});
+	
+	$('.title').click(function(){
+		var $ul = $(this).next('ul');
+		$('dd').find('ul').slideUp();
+		if($ul.is(':visible')){
+			$(this).next('ul').slideUp();
+		}else{
+			$(this).next('ul').slideDown();
+		}
+	});
+})	
+</script>
+
+
+</head>
+
+<body style="background:#f0f9fd;">
+	<div class="lefttop"><span></span>菜单</div>
+    
+    <dl class="leftmenu">
+        
+    <dd>
+    <div class="title">
+    <span><img src="images/leftico01.png" /></span>管理信息
+    </div>
+    	<ul class="menuson">
+        <li><cite></cite><a href="index.html" target="rightFrame">首页</a><i></i></li>
+        </ul>    
+    </dd>
+
+    <dd>
+    <div class="title">
+    <span><img src="images/leftico01.png" /></span>图书管理
+    </div>
+    	<ul class="menuson">
+        <li class="active"><cite></cite><a href="BookList.htm" target="rightFrame">图书列表</a><i></i></li>
+        <li><cite></cite><a href="AddBook.htm" target="rightFrame">添加图书</a><i></i></li>
+         <li><cite></cite><a href="BookType.htm" target="rightFrame">图书类型列表</a><i></i></li>
+          <li><cite></cite><a href="AddBookType.htm" target="rightFrame">添加图书类型</a><i></i></li>
+<!--           <li><cite></cite><a href="" target="rightFrame">书架列表</a><i></i></li>
+          <li><cite></cite><a href="" target="rightFrame">添加书架</a><i></i></li>-->
+        </ul>    
+    </dd>
+        
+
+    <dd>
+    <div class="title">
+    <span><img src="images/leftico01.png" /></span>读者管理
+    </div>
+    	<ul class="menuson">
+        <li class="active"><cite></cite><a href="ReaderList.htm" target="rightFrame">读者列表</a><i></i></li>
+        <li><cite></cite><a href="Addreader.htm" target="rightFrame">添加读者</a><i></i></li>
+        </ul>    
+    </dd>
+
+     <dd>
+    <div class="title">
+    <span><img src="images/leftico01.png" /></span>预约管理
+    </div>
+    	<ul class="menuson">
+        <li class="active"><cite></cite><a href="AppointmentList.htm" target="rightFrame">预约列表</a><i></i></li>
+        </ul>    
+    </dd>
+    
+     <dd>
+    <div class="title">
+    <span><img src="images/leftico01.png" /></span>借阅管理
+    </div>
+    	<ul class="menuson">
+        <li class="active"><cite></cite><a href="Borrow.htm" target="rightFrame">借阅图书</a><i></i></li>
+         <li class=""><cite></cite><a href="BorrowList.htm" target="rightFrame">归还图书</a><i></i></li>
+        </ul>    
+    </dd>
+
+
+    
+       <dd>
+    <div class="title">
+    <span><img src="images/leftico01.png" /></span>通告管理
+    </div>
+    	<ul class="menuson">
+        <li class="active"><cite></cite><a href="AnnunciateList.htm" target="rightFrame">通告列表</a><i></i></li>
+         <li class=""><cite></cite><a href="AddAnnunciate.htm" target="rightFrame">添加通告</a><i></i></li>
+        </ul>    
+    </dd>
+
+    <dd>
+    <div class="title">
+    <span><img src="images/leftico01.png" /></span>管理员管理
+    </div>
+    	<ul class="menuson">
+        <li class="active"><cite></cite><a href="ManagementList.htm" target="rightFrame">管理员列表</a><i></i></li>
+
+        </ul>    
+    </dd>
+
+    </dl>
+</body>
+</html>

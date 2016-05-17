@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Querys>
+  <Query name="InsertUser">
+    <Parameters>
+      <Parameter type="string">StudentID</Parameter>
+        <Parameter type="string">UserName</Parameter>
+        <Parameter type="string">Phone</Parameter>
+        <Parameter type="string">Sex</Parameter>
+        <Parameter type="string">Department</Parameter>
+        <Parameter type="string">Profession</Parameter>
+        <Parameter type="string">Class</Parameter>
+        <Parameter type="string">Birthday</Parameter>
+        <Parameter type="string">StartTime</Parameter>
+        <Parameter type="string">ValidityTime</Parameter>
+        <Parameter type="string">UserBorrow</Parameter>
+        <Parameter type="string">Loss</Parameter>
+        <Parameter type="string">UserPWD</Parameter>
+        <Parameter type="string">Remark</Parameter>
+    </Parameters>
+    <QuerySQL>
+        INSERT INTO [t_User]([StudentID],[UserName],[Phone],[Sex],[Department],[Profession],[Class],[Birthday],[StartTime],[ValidityTime],[UserBorrow],[Loss],[UserPWD],[Remark]) VALUES(@StudentID,@UserName,@Phone,@Sex,@Department,@Profession,@Class,@Birthday,@StartTime,@ValidityTime,@UserBorrow,@Loss,@UserPWD,@Remark)
+    </QuerySQL>
+  </Query>
+
+  <Query name="SelectUsers">
+    <Parameters>
+      <Parameter type="string"></Parameter>
+    </Parameters>
+    <QuerySQL>select * from t_User where 1=1 {0}</QuerySQL>
+  </Query>
+  
+  <Query name="Select_User_Page">
+    <Parameters>
+    
+    </Parameters>
+    <QuerySQL>
+        select * from (select ROW_NUMBER() over (order by [UserID] desc)as ROWNUM,* from(select * from t_User )as de where 1=1 {2}) AS t WHERE t.ROWNUM>{0} AND t.ROWNUM&lt;={1}
+    </QuerySQL>
+  </Query>
+
+  <Query name="Delete_User">
+    <Parameters>
+      <Parameter type="string">UserID</Parameter>
+    </Parameters>
+    <QuerySQL>delete from t_User where UserID=@UserID</QuerySQL>
+  </Query>
+
+  <Query name="Update_User">
+    <Parameters>
+      <Parameter type="string">StudentID</Parameter>
+        <Parameter type="string">UserName</Parameter>
+        <Parameter type="string">Phone</Parameter>
+        <Parameter type="string">Sex</Parameter>
+        <Parameter type="string">Department</Parameter>
+        <Parameter type="string">Profession</Parameter>
+        <Parameter type="string">Class</Parameter>
+        <Parameter type="string">Birthday</Parameter>
+        <Parameter type="string">Remark</Parameter>
+        <Parameter type="string">UserID</Parameter>
+    </Parameters>
+    <QuerySQL>
+        update t_User set [StudentID]=@StudentID,[UserName]=@UserName,[Phone]=@Phone,[Sex]=@Sex,[Department]=@Department,[Profession]=@Profession,[Class]=@Class,[Birthday]=@Birthday,[Remark]=@Remark  where [UserID]=@UserID
+    </QuerySQL>
+  </Query>
+
+    <Query name="Delete_User">
+        <Parameters>
+            <Parameter type="string">UserID</Parameter>
+        </Parameters>
+        <QuerySQL>delete from t_User where UserID=@UserID</QuerySQL>
+    </Query>
+
+    <Query name="Update_User_PWD">
+        <Parameters>
+            <Parameter type="string">UserPWD</Parameter>
+            <Parameter type="string">UserID</Parameter>
+        </Parameters>
+        <QuerySQL>
+            update t_User set [UserPWD]=@UserPWD where [UserID]=@UserID
+        </QuerySQL>
+    </Query>
+    
+    <Query name="Select_User_PWD">
+        <Parameters>
+            <Parameter type="string">UserID</Parameter>
+            <Parameter type="string">UserPWD</Parameter>
+        </Parameters>
+        <QuerySQL>
+            select * from t_User where UserID=@UserID and UserPWD=@UserPWD
+        </QuerySQL>
+    </Query>
+
+    <Query name="Select_User_UserID">
+        <Parameters>
+            <Parameter type="string">UserID</Parameter>
+        </Parameters>
+        <QuerySQL>
+            select * from t_User where UserID=@UserID
+        </QuerySQL>
+    </Query>
+
+    <Query name="Update_User_Borrow">
+        <Parameters>
+            <Parameter type="string">StudentID</Parameter>
+        </Parameters>
+        <QuerySQL>
+            update t_User set UserBorrow=UserBorrow+1 where StudentID=@StudentID
+        </QuerySQL>
+    </Query>
+
+  <Query name="Select_User_Page_Count">
+    <Parameters>
+      <Parameter type=""></Parameter>
+    </Parameters>
+    <QuerySQL>
+      select COUNT(UserID) from t_User where 1=1 {0}
+    </QuerySQL>
+  </Query>
+  
+  <Query name="Update_User_Loss">
+    <Parameters>
+      <Parameter type="string">Loss</Parameter>
+      <Parameter type="string">UserID</Parameter>
+    </Parameters>
+    <QuerySQL>
+      update t_User set Loss=@Loss where UserID=@UserID
+    </QuerySQL>
+  </Query>
+
+  
+</Querys>
+

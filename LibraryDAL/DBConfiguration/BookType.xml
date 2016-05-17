@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Querys>
+    
+    <Query name="Insert_BookType">
+        <Parameters>
+            <Parameter type="string">TypeName</Parameter>
+            <Parameter type="string">CreatTime</Parameter>
+        </Parameters>
+        <QuerySQL>insert into t_BookType([TypeName],[CreatTime]) values(@TypeName,@CreatTime)</QuerySQL>
+    </Query>
+
+    <Query name="Select_BookType">
+        <Parameters>
+            <Parameter type="string"></Parameter>
+        </Parameters>
+        <QuerySQL>SELECT * FROM t_BookType</QuerySQL>
+    </Query>
+
+    <Query name="Delete_BookType">
+        <Parameters>
+            <Parameter type="string">BookTypeID</Parameter>
+        </Parameters>
+        <QuerySQL>DELETE FROM t_BookType WHERE BookTypeID=@BookTypeID</QuerySQL>
+    </Query>
+
+    <Query name="">
+        <Parameters>
+            <Parameter type="string"></Parameter>
+        </Parameters>
+        <QuerySQL></QuerySQL>
+    </Query>
+
+    <Query name="">
+        <Parameters>
+            <Parameter type="string"></Parameter>
+        </Parameters>
+        <QuerySQL></QuerySQL>
+    </Query>
+
+    <Query name="">
+        <Parameters>
+            <Parameter type="string"></Parameter>
+        </Parameters>
+        <QuerySQL></QuerySQL>
+    </Query>
+</Querys>

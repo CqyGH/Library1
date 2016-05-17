@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>读者详情</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script src="js/Reader.js" type="text/javascript"></script>
+<script src="../js/jquery-1.8.3.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        SelectReader()
+    })
+</script>
+</head>
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="index.html">首页</a></li>
+    <li><a href="ReaderList.htm">读者列表</a></li>
+    <li><a href="#">读者详细</a></li>
+    </ul>
+    </div>
+    
+    <div class="formbody">
+    
+    <div class="formtitle"><span>基本信息</span></div>
+    
+    <ul class="forminfo">
+    <li><label>学号</label><input id="StudentID" name="" type="text" class="dfinput" readonly="readonly"/><i></i></li>
+    <li><label>姓名</label><input id="UserName"  name="" type="text" class="dfinput"readonly="readonly" /><i></i></li>
+     <li><label>联系电话</label><input id="Phone"  name="" type="text" class="dfinput" readonly="readonly"/><i></i></li>
+    <li><label>性别</label>
+        <select id="Sex"  class="dfinput" disabled="disabled" >
+            <option>男</option>
+            <option>女</option>
+        </select><i></i></li>
+     <li><label>系部</label><input id="Department"  name="" type="text" class="dfinput" readonly="readonly"/><i></i></li>
+     <li><label>班级</label>
+        <select id="Class"   class="dfinput" disabled="disabled">
+            <option>2005级</option>
+            <option>2006级</option>
+            <option>2007级</option>
+            <option>2008级</option>
+            <option>2009级</option>
+            <option>2010级</option>
+            <option>2011级</option>
+            <option>2012级</option>
+            <option>2013级</option>
+            <option>2014级</option>
+            <option>2015级</option>
+            <option>2016级</option>
+            <option>2017级</option>
+            <option>2018级</option>
+            <option>2019级</option>
+            <option>2020级</option>
+        </select><i></i></li>
+    <li><label>专业</label><input id="Profession"  name="" type="text" class="dfinput" readonly="readonly"/><i></i></li>
+    <li><label>出生年月</label><input id="Birthday"  name="" type="text" class="dfinput" readonly="readonly"/><i></i></li>
+
+    <li><label>办证日期</label><input id="StartTime" class="dfinput" name="" type="text"readonly="readonly" /><i></i></li>
+    <li><label>有效期至</label><input id="ValidityTime" class="dfinput" name="" type="text" readonly="readonly"/><i></i></li>
+    <li><label>图书借阅次数</label><input id="UserBorrow" class="dfinput" name="" type="text" readonly="readonly"/><i></i></li>
+    <li><label>是否挂失</label><input id="Loss" class="dfinput" name="" type="text"readonly="readonly" /><i></i></li>
+    <li><label>备注</label><textarea id="Remark"  name="" cols="" rows="" class="textinput" readonly="readonly"  style="overflow:scroll; overflow-x:hidden;resize: none"></textarea></li>
+     <li><label>&nbsp;</label><input id=""  name="" type="button" class="btn" value="返回" onclick="exit()"/></li>
+    </ul>
+    </div>
+</body>
+</html>

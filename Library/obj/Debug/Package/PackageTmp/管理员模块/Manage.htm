@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>添加管理员</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="js/Manage.js" type="text/javascript"></script>
+<script src="../js/jquery-1.8.3.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        SelectManage()
+    });
+</script>
+
+</head>
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="index.html">首页</a></li>
+    <li><a href="#">添加管理员</a></li>
+    </ul>
+    </div>
+    
+    <div class="formbody">
+    
+    <div class="formtitle"><span>基本信息</span></div>
+    
+   <ul class="forminfo">
+    <li><label>管理员名</label><input id="ManagementName" name="" type="text" class="dfinput" readonly="readonly" /><i></i></li>
+     <li><label>性别</label>
+        <select id="Sex"  class="dfinput" >
+            <option>请选择</option>
+            <option>男</option>
+            <option>女</option>
+        </select>    
+    </li>
+     <li><label>学历</label><input id="Education"  name="" type="text" class="dfinput" readonly="readonly" /><i></i></li>
+    <li><label>生日</label><input id="Birthday" type="text" class="dfinput" readonly="readonly"/><i></i></li>
+     <li><label>联系电话</label><input id="Phone"  name="" type="text" class="dfinput" readonly="readonly"/><i></i></li>
+     <li><label>住址</label><input id="ManagementAddress" name="" type="text" class="dfinput" readonly="readonly"/><i></i></li>
+    <li><label>备注</label><textarea id="Remark" name="" cols="" rows="" class="textinput" readonly="readonly"></textarea></li>
+     <li><label>&nbsp;</label><input name="" type="button" class="btn" value="返回" onclick="exit()"/></li>
+    </ul>
+    </div>
+</body>
+</html>

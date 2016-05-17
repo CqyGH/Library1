@@ -1,0 +1,485 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>图书馆</title>
+    <link href="style/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="style/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="style/chocolat.css" rel="stylesheet" type="text/css" media="screen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Progress Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <script src="js/modernizr.custom.97074.js" type="text/javascript"></script>
+    <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="js/index.js" type="text/javascript"></script>
+    <!--<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>-->
+    <script src="js/move-top.js" type="text/javascript"></script>
+    <script src="js/easing.js" type="text/javascript"></script>
+    <script language="text/javascript">
+   function mouseOver()
+   {
+       if (!document.all)
+       return
+    if (button1.style.borderColor=="yellow")
+           button1.style.borderColor="blue"
+       else 
+        button1.style.borderColor="yellow"
+  
+   }  
+      setInterval("mouseOver()", 500)
+      
+    </script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1200);
+            });
+        });
+    </script>
+    <!---->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            SearchBook(1, 1000)
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            ShowTop15Book()
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            SearchAnnunciate()
+        });
+    </script>
+</head>
+<!--banner-->
+<div id="home" class="banner">
+    <!-- <div class="header">
+		 <div class="container">
+			 <div class="logo">
+				 <h1><a href="#">Progress</a></h1>
+			 </div>
+		 </div>
+	 </div>-->
+    <div class="top-menu">
+        <div class="container">
+            <nav class="cl-effect-1">
+				<span class="menu"><img src="images/nav-icon.png" alt=""/></span>
+			 <ul>
+				 <li><a class="scroll" href="#home">主页</a></li>
+				 <li><a class="scroll" href="#about">简介</a></li>
+                 <li><a class="scroll" href="#gallery">学院风采</a></li>
+				 <li><a class="scroll" href="#service">搜索</a></li>
+				 <li><a class="scroll" href="#skills">排行</a></li>
+				 <li><a class="scroll" href="#testi">通知</a></li>
+				 <li><a class="scroll" href="#Login.htm" onclick="temp()">登陆</a></li>
+			 </ul>
+			 </nav>
+        </div>
+        <!-- script-for-menu -->
+        <script>
+            $("span.menu").click(function () {
+                $(".top-menu ul").slideToggle("slow", function () {
+                });
+            });
+        </script>
+        <!-- script-for-menu -->
+    </div>
+    <div class="banner-info">
+        <div class="container">
+            <h2>
+                <span>生活里没有书籍，就好像没有阳光；</span></h2>
+            <h2>
+                <span>智慧里没有书籍，就好像鸟儿没有翅膀。</span>
+            </h2>
+        </div>
+    </div>
+    <div class="banner-form">
+        <div class="container">
+            <p>
+                如果您需要预约书籍，请直接填写您的学号和预约书籍名</p>
+            <form>
+            <input id="StudentID" type="text" value="" placeholder="学号">
+            <input id="BookName" type="text" value="" placeholder="书名">
+            <!--<input type="submit" value="提交" onclick="AddApointment()">-->
+            <input type="button" style="height: 36px; width: 84px; border: 3px solid yellow"
+                value="提交" onclick="AddApointment()" onmouseover="mouseOver()">
+            </form>
+        </div>
+    </div>
+</div>
+<!---->
+<div id="about" class="about">
+    <div class="container">
+        <h3 class="abt">
+            简介</h3>
+        <div class="about-top">
+            <h3>
+                巢湖学院图书馆</h3>
+            <p>
+                巢湖学院图书馆始建于1979年9月，当时隶属于教务处。1981年以后，图书馆成为学校独立二级机构。2000年7月独立馆舍落成。现馆由美籍华人徐经方先生捐资和安徽省教委拨款兴建。现馆馆舍面积6500平方米，阅览座位1050余席。经过二十余年发展，我馆已拥有相当规模的文献资源,
+                馆藏图书总量近40万册（其中馆藏线装书籍1600余册），过期期刊合订本24000册，每年入藏中外文图书1万种以上，订购报刊1100种。</p>
+        </div>
+        <div class="about-grids">
+            <div class="col-md-6 about-grid-info">
+                <h3>
+                    硬件设施</h3>
+                <p>
+                    2013年5月新图书馆建成并投入使用，是华东地区最大的图书馆。馆舍共10层，配有2台电梯，新增小说、社会科学、自然科学等一批新开放书库，新增许多书籍、期刊，并配有电子查询设备，老图书馆改用为文科综合实训楼和电子阅览室。</p>
+                <h3>
+                    业务部门</h3>
+                <p>
+                    我馆业务部门有：采编部（采访室、编目室）、流通部（文科书库、理科书库、样本书库、文献检索书库、特藏室、外文室）、期刊部（过期期刊阅览室、教师现刊阅览室、学生现刊阅览室）、信息技术部（网络室、电子阅览室、视听室）等。目前，我馆自动化、网络化建设取得了重要进展。逐步建立起比较先进、完备的信息基础设施。引进“图腾”计算机管理集成软件建立局域网；馆内业务工作如编目、期刊管理以及流通等业务均在“图腾”管理下进行；通过网络提供馆藏中外文图书和期刊目录的公共查询；我馆建立的光盘网络查询系统，通过校园网为全校师生提供文献信息检索服务。</p>
+            </div>
+            <div class="col-md-6 about-pic">
+                <img src="images/chxytsg.jpg" class="img-responsive" alt="" />
+            </div>
+            <div class="clearfix">
+            </div>
+        </div>
+    </div>
+</div>
+<!---->
+<div class="gallery" id="gallery">
+    <div class="container">
+        <h3>
+            学院风采</h3>
+        <div class="gallery-grids">
+            <section>
+				<ul id="da-thumbs" class="da-thumbs">
+					<li>
+						<a href="images/g10.jpg" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/g10.jpg" alt="" />
+							<div>
+								<h5>校园俯瞰</h5>
+								<span></span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/g12.jpg" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/g12.jpg" alt="" />
+							<div>
+								<h5>烟雨蒙蒙</h5>
+								<span></span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/g13.jpg" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/g13.jpg" alt="" />
+							<div>
+								<h5>春意盎然</h5>
+								<span></span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/g14.jpg" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/g14.jpg" alt="" />
+							<div>
+								<h5>青山秀水</h5>
+								<span></span>
+							</div>
+						</a>
+					</li>
+					<li>	
+						<a href="images/g15.jpg" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/g15.jpg" alt="" />
+							<div>
+								<h5>白雪皑皑</h5>
+								<span></span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/g16.jpg" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/g16.jpg" alt="" />
+							<div>
+								<h5>波光粼粼</h5>
+								<span></span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/g17.jpg" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/g17.jpg" alt="" />
+							<div>
+								<h5>硕果累累</h5>
+								<span></span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/g18.jpg" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/g18.jpg" alt="" />
+							<div>
+								<h5>旭日初升</h5>
+								<span></span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/g11.jpg" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/g11.jpg" alt="" />
+							<div>
+								<h5>玲珑剔透</h5>
+								<span></span>
+							</div>
+						</a>
+					</li>					
+				</ul>
+				<div class="clearfix"> </div>
+			</section>
+            <script type="text/javascript" src="js/jquery.hoverdir.js"></script>
+            <script type="text/javascript">
+                $(function () {
+
+                    $(' #da-thumbs > li ').each(function () { $(this).hoverdir(); });
+
+                });
+            </script>
+        </div>
+    </div>
+</div>
+<div id="service" class="service">
+    <div class="container">
+        <h3 class="ser">
+            搜索</h3>
+        <div class="service-grids" style="margin-top: 10px; text-align: center;">
+            <select id="selectName">
+                <option>请选择</option>
+                <option>书名</option>
+                <option>作者</option>
+            </select>
+            <input type="text" id="SearchName" style="height: 40px; width: 250px; margin: 20px,auto,auto,10px;
+                border: solid 1px #d8d8d8" />
+            <input type="button" style="height: 40px; width: 100px; margin: 20px,auto,auto,10px"
+                value="查询" onclick="SearchBook(1,1000)" />
+            <div style="width: 100%; height: 600px; overflow-y: visible; overflow-x: hidden;">
+                <table id="BookList" border="1">
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!---->
+<!--script-->
+<script src="js/jquery.chocolat.js"></script>
+<!--light-box-files -->
+<script type="text/javascript">
+    $(function () {
+        $('.gallery a').Chocolat();
+    });
+</script>
+<!--script-->
+<!--//gallery-->
+<div id="skills" class="skills">
+    <div class="container">
+        <h3>
+            排行</h3>
+        <div id="Ranklist" class="skill-grids">
+            <!-- <h4>JAVA</h4>
+				<div class="progress">			  
+				  <div class="progress-bar progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
+					  <span class="sr-only">80% Complete</span>
+					</div>			  
+				</div>-->
+        </div>
+    </div>
+</div>
+<!---->
+<script src="js/responsiveslides.min.js"></script>
+<script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+      $("#slider2").responsiveSlides({
+        auto: true,
+        pager: true,
+        speed: 300,
+        namespace: "callbacks",
+      });
+    });
+</script>
+<!---->
+<div id="testi" class="pricing">
+    <div class="container">
+        <div class="pricing-text">
+            <h3>
+                通知</h3>
+        </div>
+        <!-- start slider -->
+        <div class="pricing-grids">
+            <div class="slider" id="AnnunciateList">
+             <!-- <ul class="rslides" id="slider2">
+                    <li>
+                        <div class="col-md-6 pricing-plans">
+                            <p>
+                                今天是馆长生日！
+                            </p>
+                            <div class="pic1">
+                                <span>2016/5/11 14:19:46</span>
+                            </div>
+                            <div class="pic-info">
+                                <h5>
+                                    馆长生日</h5>
+                                <a href="#">查看</a>
+                            </div>
+                            <div class="clearfix">
+                            </div>
+                        </div>
+                        <div class="col-md-6 pricing-plans">
+                            <p>
+                                测试
+                            </p>
+                            <div class="pic1">
+                                <span>2016/5/12 14:59:20</span>
+                            </div>
+                            <div class="pic-info">
+                                <h5>
+                                    测试1</h5>
+                                <a href="#">查看</a>
+                            </div>
+                            <div class="clearfix">
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="col-md-6 pricing-plans">
+                            <p>
+                                测试2
+                            </p>
+                            <div class="pic1">
+                                <span>2016/5/12 14:59:26</span>
+                            </div>
+                            <div class="pic-info">
+                                <h5>
+                                    测试2</h5>
+                                <a href="#">查看</a>
+                            </div>
+                            <div class="clearfix">
+                            </div>
+                        </div>
+                        <div class="col-md-6 pricing-plans">
+                            <p>
+                                测试3
+                            </p>
+                            <div class="pic1">
+                                <span>2016/5/12 14:59:33</span>
+                            </div>
+                            <div class="pic-info">
+                                <h5>
+                                    测试3</h5>
+                                <a href="#">查看</a>
+                            </div>
+                            <div class="clearfix">
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="col-md-6 pricing-plans">
+                            <p>
+                                测试4
+                            </p>
+                            <div class="pic1">
+                                <span>2016/5/12 14:59:39</span>
+                            </div>
+                            <div class="pic-info">
+                                <h5>
+                                    测试4</h5>
+                                <a href="#">查看</a>
+                            </div>
+                            <div class="clearfix">
+                            </div>
+                        </div>
+                        <div class="col-md-6 pricing-plans">
+                            <p>
+                                测试5
+                            </p>
+                            <div class="pic1">
+                                <span>2016/5/12 14:59:45</span>
+                            </div>
+                            <div class="pic-info">
+                                <h5>
+                                    测试5</h5>
+                                <a href="#">查看</a>
+                            </div>
+                            <div class="clearfix">
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="col-md-6 pricing-plans">
+                            <p>
+                                测试6
+                            </p>
+                            <div class="pic1">
+                                <span>2016/5/12 14:59:53</span>
+                            </div>
+                            <div class="pic-info">
+                                <h5>
+                                    测试6</h5>
+                                <a href="#">查看</a>
+                            </div>
+                            <div class="clearfix">
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                    </li>
+                </ul>-->
+             
+            </div>
+            <!-- end slider -->
+        </div>
+    </div>
+</div>
+<!---->
+<div class="footer">
+    <div class="container">
+        <div class="copywrite">
+            <p>
+                Copyright &copy; 2016.陈清阳.毕业设计 All rights reserved</p>
+        </div>
+        <!--<div class="social">							
+				<a href="#"><i class="facebook"></i></a>
+				<a href="#"><i class="twitter"></i></a>
+				<a href="#"><i class="dribble"></i></a>	
+				<a href="#"><i class="google"></i></a>	
+				<a href="#"><i class="youtube"></i></a>	
+		 </div>-->
+        <div class="clearfix" style="float: right">
+            <img src="images/WX.png" width="50" height="50" onmouseover="this.width='300'; this.height='300';"
+                onmouseout="this.width='50'; this.height='50'">
+        </div>
+    </div>
+</div>
+<!---->
+<script type="text/javascript">
+    $(document).ready(function () {
+        /*
+        var defaults = {
+        containerID: 'toTop', // fading element id
+        containerHoverID: 'toTopHover', // fading element hover id
+        scrollSpeed: 1200,
+        easingType: 'linear' 
+        };
+        */
+        $().UItoTop({ easingType: 'easeOutQuart' });
+    });
+</script>
+<a href="#to-top" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;">
+</span></a>
+<!---->
+</body>
+</html>

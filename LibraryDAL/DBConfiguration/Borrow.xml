@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Querys>
+    <Query name="Insert_Borrow">
+        <Parameters>
+            <Parameter type="string">StudentID</Parameter>
+            <Parameter type="string">ISBN</Parameter>
+            <Parameter type="string">BorrowTime</Parameter>
+            <Parameter type="string">ReturnTime</Parameter>
+            <Parameter type="string">Renew</Parameter>
+            <Parameter type="string">BorrowStatus</Parameter>
+          <Parameter type="string">Cost</Parameter>
+        </Parameters>
+      <QuerySQL>INSERT INTO t_Borrow([Cost],[StudentID],[UserName],[BookID],[BookName],[BorrowTime],[ReturnTime],[Renew],[BorrowStatus],[ISBN]) SELECT @Cost,@StudentID,[UserName]=(select [UserName] FROM t_User where StudentID=@StudentID),[BookID]=(select [BookID] from t_Book where ISBN=@ISBN), [BookName]=(select [BookName] from t_Book where ISBN=@ISBN),@BorrowTime,@ReturnTime,@Renew,@BorrowStatus,@ISBN</QuerySQL>
+    </Query>
+
+    <Query name="Select_Student_Borrow_Count">
+        <Parameters>
+            <Parameter type="string">StudentID</Parameter>
+        </Parameters>
+        <QuerySQL>
+          select COUNT(StudentID) from t_Borrow where StudentID=@StudentID and BorrowStatus='0'
+        </QuerySQL>
+    </Query>
+
+    <Query name="Select_StudentBorrow">
+        <Parameters>
+            <Parameter type="string">StudentID</Parameter>
+        </Parameters>
+        <QuerySQL>select * from t_Borrow where StudentID=@StudentID and BorrowStatus='0'</QuerySQL>
+    </Query>
+
+    <Query name="Update_Borrow_Return">
+        <Parameters>
+          <Parameter type="string">BorrowStatus</Parameter>
+          <Parameter type="string">BorrowID</Parameter>
+        </Parameters>
+        <QuerySQL>
+          update t_Borrow set BorrowStatus=@BorrowStatus where BorrowID=@BorrowID
+        </QuerySQL>
+    </Query>
+
+    <Query name="Update_Borrow_Cost">
+        <Parameters>
+            <Parameter type="string">Cost</Parameter>
+          <Parameter type="string">BorrowID</Parameter>
+        </Parameters>
+        <QuerySQL>update t_Borrow set Cost=@Cost where BorrowID=@BorrowID</QuerySQL>
+    </Query>
+
+    <Query name="Select_Book_BorrowStatus_Count">
+        <Parameters>
+            <Parameter type="string">BookID</Parameter>
+        </Parameters>
+        <QuerySQL> SELECT COUNT(BookID) FROM t_Borrow WHERE BookID=@BookID  AND BorrowStatus='0'</QuerySQL>
+    </Query>
+
+  <Query name="Update_Borrow_Renew">
+    <Parameters>
+      <Parameter type="string">BorrowID</Parameter>
+      <Parameter type="string">ReturnTime</Parameter>
+    </Parameters>
+    <QuerySQL> update t_Borrow set [ReturnTime]=@ReturnTime,[Renew]=(Renew+1)  where BorrowID=@BorrowID</QuerySQL>
+  </Query>
+
+
+ 
+</Querys>

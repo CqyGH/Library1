@@ -1,0 +1,836 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F54EC8FD-E7FA-4272-93A4-EB7EFB95521A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Library</RootNamespace>
+    <AssemblyName>Library</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Annunciate.htm" />
+    <Content Include="Book.htm" />
+    <Content Include="images\bg2.png" />
+    <Content Include="images\bnr.jpg" />
+    <Content Include="images\chxytsg.jpg" />
+    <Content Include="images\close.png" />
+    <Content Include="images\g1.jpg" />
+    <Content Include="images\g10.jpg" />
+    <Content Include="images\g11.jpg" />
+    <Content Include="images\g12.jpg" />
+    <Content Include="images\g13.jpg" />
+    <Content Include="images\g14.jpg" />
+    <Content Include="images\g15.jpg" />
+    <Content Include="images\g16.jpg" />
+    <Content Include="images\g17.jpg" />
+    <Content Include="images\g18.jpg" />
+    <Content Include="images\g2.jpg" />
+    <Content Include="images\g3.jpg" />
+    <Content Include="images\g4.jpg" />
+    <Content Include="images\g5.jpg" />
+    <Content Include="images\g6.jpg" />
+    <Content Include="images\g7.jpg" />
+    <Content Include="images\g8.jpg" />
+    <Content Include="images\g9.jpg" />
+    <Content Include="images\img1.jpg" />
+    <Content Include="images\left.png" />
+    <Content Include="images\m1.jpg" />
+    <Content Include="images\m2.jpg" />
+    <Content Include="images\m3.jpg" />
+    <Content Include="images\nav-icon.png" />
+    <Content Include="images\right.png" />
+    <Content Include="images\s1.jpg" />
+    <Content Include="images\s2.jpg" />
+    <Content Include="images\social-icons.png" />
+    <Content Include="images\to-top1.png" />
+    <Content Include="images\WX.png" />
+    <Content Include="index.html" />
+    <Content Include="jpaginate\about.png" />
+    <Content Include="jpaginate\bg.png" />
+    <Content Include="jpaginate\codrops_back.png" />
+    <Content Include="jpaginate\css\style.css" />
+    <Content Include="jpaginate\images\next.png" />
+    <Content Include="jpaginate\images\previous.png" />
+    <Content Include="jpaginate\images\snext.png" />
+    <Content Include="jpaginate\images\sprevious.png" />
+    <Content Include="jpaginate\jPaginate.html" />
+    <Content Include="jpaginate\jquery-1.3.2.js" />
+    <Content Include="jpaginate\jquery.paginate.js" />
+    <Content Include="jpaginate\www.jq22.com.txt" />
+    <Content Include="js\Annunciate.js" />
+    <Content Include="js\Book.js" />
+    <Content Include="js\CODE.js" />
+    <Content Include="js\easing.js" />
+    <Content Include="js\index.js" />
+    <Content Include="js\jquery-1.8.3.min.js" />
+    <Content Include="js\jquery.chocolat.js" />
+    <Content Include="js\jquery.hoverdir.js" />
+    <Content Include="js\jquery.md5.js" />
+    <Content Include="js\Login.js" />
+    <Content Include="js\Main.js" />
+    <Content Include="js\modernizr.custom.97074.js" />
+    <Content Include="js\move-top.js" />
+    <Content Include="js\responsiveslides.min.js" />
+    <Content Include="Login.htm" />
+    <Content Include="style\bootstrap.css" />
+    <Content Include="style\chocolat.css" />
+    <Content Include="style\Login.css" />
+    <Content Include="style\Main.css" />
+    <Content Include="lib\Newtonsoft.Json.dll" />
+    <Content Include="style\style.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="学生模块\AlertPWD.htm" />
+    <Content Include="学生模块\AppointmentList.htm" />
+    <Content Include="学生模块\Book.htm" />
+    <Content Include="学生模块\BookList.htm" />
+    <Content Include="学生模块\BorrowList.htm" />
+    <Content Include="学生模块\css\AlterPwd.css" />
+    <Content Include="学生模块\css\select.css" />
+    <Content Include="学生模块\css\style.css" />
+    <Content Include="学生模块\editor\kindeditor.js" />
+    <Content Include="学生模块\editor\plugins\about.html" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_01.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_02.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_03.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_04.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_05.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_06.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_07.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_08.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_09.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_10.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_11.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_12.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_13.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_14.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_15.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_16.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_17.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_18.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_19.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_20.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_21.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_22.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_23.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_24.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_25.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_26.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_27.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_28.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_29.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_30.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_31.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_32.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_33.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_34.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_35.gif" />
+    <Content Include="学生模块\editor\plugins\emoticons\etc_36.gif" />
+    <Content Include="学生模块\editor\plugins\flash.html" />
+    <Content Include="学生模块\editor\plugins\image.html" />
+    <Content Include="学生模块\editor\plugins\link.html" />
+    <Content Include="学生模块\editor\plugins\media.html" />
+    <Content Include="学生模块\editor\plugins\plainpaste.html" />
+    <Content Include="学生模块\editor\plugins\remote_image.html" />
+    <Content Include="学生模块\editor\plugins\wordpaste.html" />
+    <Content Include="学生模块\editor\skins\default.css" />
+    <Content Include="学生模块\editor\skins\default.gif" />
+    <Content Include="学生模块\editor\skins\div.gif" />
+    <Content Include="学生模块\editor\skins\dl.gif" />
+    <Content Include="学生模块\editor\skins\editor.css" />
+    <Content Include="学生模块\editor\skins\ol.gif" />
+    <Content Include="学生模块\editor\skins\p.gif" />
+    <Content Include="学生模块\editor\skins\tinymce.css" />
+    <Content Include="学生模块\editor\skins\tinymce.gif" />
+    <Content Include="学生模块\editor\skins\ul.gif" />
+    <Content Include="学生模块\error.html" />
+    <Content Include="学生模块\form.html" />
+    <Content Include="学生模块\images\001.jpg" />
+    <Content Include="学生模块\images\404.png" />
+    <Content Include="学生模块\images\add.png" />
+    <Content Include="学生模块\images\btnbg.png" />
+    <Content Include="学生模块\images\btnbg1.png" />
+    <Content Include="学生模块\images\btnbg2.png" />
+    <Content Include="学生模块\images\buttonbg.png" />
+    <Content Include="学生模块\images\c01.png" />
+    <Content Include="学生模块\images\c02.png" />
+    <Content Include="学生模块\images\c03.png" />
+    <Content Include="学生模块\images\cbg.png" />
+    <Content Include="学生模块\images\clist.png" />
+    <Content Include="学生模块\images\close.png" />
+    <Content Include="学生模块\images\close1.png" />
+    <Content Include="学生模块\images\cloud.png" />
+    <Content Include="学生模块\images\d01.png" />
+    <Content Include="学生模块\images\d02.png" />
+    <Content Include="学生模块\images\d03.png" />
+    <Content Include="学生模块\images\d04.png" />
+    <Content Include="学生模块\images\d05.png" />
+    <Content Include="学生模块\images\d06.png" />
+    <Content Include="学生模块\images\d07.png" />
+    <Content Include="学生模块\images\diskbg.png" />
+    <Content Include="学生模块\images\dp.png" />
+    <Content Include="学生模块\images\f01.png" />
+    <Content Include="学生模块\images\f02.png" />
+    <Content Include="学生模块\images\f03.png" />
+    <Content Include="学生模块\images\f04.png" />
+    <Content Include="学生模块\images\f05.png" />
+    <Content Include="学生模块\images\f06.png" />
+    <Content Include="学生模块\images\help.png" />
+    <Content Include="学生模块\images\i01.png" />
+    <Content Include="学生模块\images\i02.png" />
+    <Content Include="学生模块\images\i03.png" />
+    <Content Include="学生模块\images\i04.png" />
+    <Content Include="学生模块\images\i05.png" />
+    <Content Include="学生模块\images\i06.png" />
+    <Content Include="学生模块\images\i07.png" />
+    <Content Include="学生模块\images\i08.png" />
+    <Content Include="学生模块\images\i09.png" />
+    <Content Include="学生模块\images\iadd.png" />
+    <Content Include="学生模块\images\ibtnbg.png" />
+    <Content Include="学生模块\images\ico01.png" />
+    <Content Include="学生模块\images\ico02.png" />
+    <Content Include="学生模块\images\ico03.png" />
+    <Content Include="学生模块\images\ico04.png" />
+    <Content Include="学生模块\images\ico05.png" />
+    <Content Include="学生模块\images\ico06.png" />
+    <Content Include="学生模块\images\icon01.png" />
+    <Content Include="学生模块\images\icon02.png" />
+    <Content Include="学生模块\images\icon03.png" />
+    <Content Include="学生模块\images\icon04.png" />
+    <Content Include="学生模块\images\icon05.png" />
+    <Content Include="学生模块\images\icon06.png" />
+    <Content Include="学生模块\images\img01.png" />
+    <Content Include="学生模块\images\img02.png" />
+    <Content Include="学生模块\images\img03.png" />
+    <Content Include="学生模块\images\img04.png" />
+    <Content Include="学生模块\images\img05.png" />
+    <Content Include="学生模块\images\img06.png" />
+    <Content Include="学生模块\images\img07.png" />
+    <Content Include="学生模块\images\img08.png" />
+    <Content Include="学生模块\images\img09.png" />
+    <Content Include="学生模块\images\img10.png" />
+    <Content Include="学生模块\images\img11.png" />
+    <Content Include="学生模块\images\img12.png" />
+    <Content Include="学生模块\images\img13.png" />
+    <Content Include="学生模块\images\img14.png" />
+    <Content Include="学生模块\images\img15.png" />
+    <Content Include="学生模块\images\inputbg.gif" />
+    <Content Include="学生模块\images\itabbg.png" />
+    <Content Include="学生模块\images\itabbg1.png" />
+    <Content Include="学生模块\images\leftico.png" />
+    <Content Include="学生模块\images\leftico01.png" />
+    <Content Include="学生模块\images\leftico02.png" />
+    <Content Include="学生模块\images\leftico03.png" />
+    <Content Include="学生模块\images\leftico04.png" />
+    <Content Include="学生模块\images\leftline.gif" />
+    <Content Include="学生模块\images\leftmenubg.gif" />
+    <Content Include="学生模块\images\lefttop.gif" />
+    <Content Include="学生模块\images\libg.png" />
+    <Content Include="学生模块\images\light.png" />
+    <Content Include="学生模块\images\line.gif" />
+    <Content Include="学生模块\images\line1.png" />
+    <Content Include="学生模块\images\list.gif" />
+    <Content Include="学生模块\images\list1.gif" />
+    <Content Include="学生模块\images\list2.png" />
+    <Content Include="学生模块\images\loginbg1.png" />
+    <Content Include="学生模块\images\loginbg2.png" />
+    <Content Include="学生模块\images\loginbg3.png" />
+    <Content Include="学生模块\images\logininfo.png" />
+    <Content Include="学生模块\images\loginlogo.png" />
+    <Content Include="学生模块\images\loginpassword.png" />
+    <Content Include="学生模块\images\loginsj.png" />
+    <Content Include="学生模块\images\loginuser.png" />
+    <Content Include="学生模块\images\logo.png" />
+    <Content Include="学生模块\images\msg.png" />
+    <Content Include="学生模块\images\navbg.png" />
+    <Content Include="学生模块\images\next.gif" />
+    <Content Include="学生模块\images\pre.gif" />
+    <Content Include="学生模块\images\px.gif" />
+    <Content Include="学生模块\images\righttop.gif" />
+    <Content Include="学生模块\images\rlist.gif" />
+    <Content Include="学生模块\images\search.png" />
+    <Content Include="学生模块\images\sj.png" />
+    <Content Include="学生模块\images\sun.png" />
+    <Content Include="学生模块\images\t01.png" />
+    <Content Include="学生模块\images\t02.png" />
+    <Content Include="学生模块\images\t03.png" />
+    <Content Include="学生模块\images\t04.png" />
+    <Content Include="学生模块\images\t05.png" />
+    <Content Include="学生模块\images\tbg.png" />
+    <Content Include="学生模块\images\tcbg.gif" />
+    <Content Include="学生模块\images\th.gif" />
+    <Content Include="学生模块\images\ticon.png" />
+    <Content Include="学生模块\images\time.png" />
+    <Content Include="学生模块\images\toolbg.gif" />
+    <Content Include="学生模块\images\topbg.gif" />
+    <Content Include="学生模块\images\topleft.jpg" />
+    <Content Include="学生模块\images\topright.jpg" />
+    <Content Include="学生模块\images\ub1.png" />
+    <Content Include="学生模块\images\uew_icon.png" />
+    <Content Include="学生模块\images\uew_icon_hover.png" />
+    <Content Include="学生模块\images\ulist.png" />
+    <Content Include="学生模块\images\user.png" />
+    <Content Include="学生模块\images\userbg.png" />
+    <Content Include="学生模块\index.html" />
+    <Content Include="学生模块\js\AlterPwd.js" />
+    <Content Include="学生模块\js\ApointmentList.js" />
+    <Content Include="学生模块\js\Book.js" />
+    <Content Include="学生模块\js\BookList.js" />
+    <Content Include="学生模块\js\BorrowList.js" />
+    <Content Include="学生模块\js\cloud.js" />
+    <Content Include="学生模块\js\format+zh_CN,default,corechart.I.js" />
+    <Content Include="学生模块\js\jquery.ba-resize.min.js" />
+    <Content Include="学生模块\js\jquery.gvChart-1.0.1.min.js" />
+    <Content Include="学生模块\js\jquery.idTabs.min.js" />
+    <Content Include="学生模块\js\jquery.js" />
+    <Content Include="学生模块\js\jsapi.js" />
+    <Content Include="学生模块\js\main.js" />
+    <Content Include="学生模块\js\PIE.htc" />
+    <Content Include="学生模块\js\Reader.js" />
+    <Content Include="学生模块\js\ReaderList.js" />
+    <Content Include="学生模块\js\ReaplyAppointment.js" />
+    <Content Include="学生模块\js\right.js" />
+    <Content Include="学生模块\js\select-ui.min.js" />
+    <Content Include="学生模块\js\top.js" />
+    <Content Include="学生模块\js\UpdateReader.js" />
+    <Content Include="学生模块\left.html" />
+    <Content Include="学生模块\login.html" />
+    <Content Include="学生模块\main.html" />
+    <Content Include="学生模块\Reader.htm" />
+    <Content Include="学生模块\ReplyAppointment.htm" />
+    <Content Include="学生模块\right.html" />
+    <Content Include="学生模块\src\jquery.gvChart-1.0.1.js" />
+    <Content Include="学生模块\tab.html" />
+    <Content Include="学生模块\tools.html" />
+    <Content Include="学生模块\top.html" />
+    <Content Include="学生模块\UpdateReader.htm" />
+    <Content Include="管理员模块\AddAnnunciate.htm" />
+    <Content Include="管理员模块\AddBook.htm" />
+    <Content Include="管理员模块\AddBookType.htm" />
+    <Content Include="管理员模块\AddCase.htm" />
+    <Content Include="管理员模块\AddManage.htm" />
+    <Content Include="管理员模块\AddReader.htm" />
+    <Content Include="管理员模块\AlertManagementPWD.htm" />
+    <Content Include="管理员模块\AlertPWD.htm" />
+    <Content Include="管理员模块\Annunciate.htm" />
+    <Content Include="管理员模块\AnnunciateList.htm" />
+    <Content Include="管理员模块\Book.htm" />
+    <Content Include="管理员模块\BookType.htm" />
+    <Content Include="管理员模块\Borrow.htm" />
+    <Content Include="管理员模块\BorrowList.htm" />
+    <Content Include="管理员模块\CaseList.htm" />
+    <Content Include="管理员模块\css\style.css" />
+    <Content Include="管理员模块\css\Style1.css" />
+    <Content Include="管理员模块\images\log.png" />
+    <Content Include="管理员模块\images\logo.png" />
+    <Content Include="管理员模块\images\QQ图片20160506143716.jpg" />
+    <Content Include="管理员模块\images\QQ图片20160506144847.jpg" />
+    <Content Include="管理员模块\js\AddAnnunciate.js" />
+    <Content Include="管理员模块\js\AddBook.js" />
+    <Content Include="管理员模块\js\AddBookType.js" />
+    <Content Include="管理员模块\js\AddCase.js" />
+    <Content Include="管理员模块\js\AddManage.js" />
+    <Content Include="管理员模块\js\AddReader.js" />
+    <Content Include="管理员模块\js\AlertManagementPWD.js" />
+    <Content Include="管理员模块\js\Annunciate.js" />
+    <Content Include="管理员模块\js\AnnunciateList.js" />
+    <Content Include="管理员模块\js\ApointmentList.js" />
+    <Content Include="管理员模块\js\Book.js" />
+    <Content Include="管理员模块\js\BookType.js" />
+    <Content Include="管理员模块\js\Borrow.js" />
+    <Content Include="管理员模块\js\BorrowList.js" />
+    <Content Include="管理员模块\js\CaseList.js" />
+    <Content Include="管理员模块\js\Manage.js" />
+    <Content Include="管理员模块\js\ManagementList.js" />
+    <Content Include="管理员模块\js\Reader.js" />
+    <Content Include="管理员模块\js\ReaderList.js" />
+    <Content Include="管理员模块\AppointmentList.htm" />
+    <Content Include="管理员模块\BookList.htm" />
+    <Content Include="管理员模块\computer.html" />
+    <Content Include="管理员模块\css\AlterPwd.css" />
+    <Content Include="管理员模块\css\select.css" />
+    <Content Include="管理员模块\default.html" />
+    <Content Include="管理员模块\editor\kindeditor.js" />
+    <Content Include="管理员模块\editor\plugins\about.html" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_01.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_02.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_03.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_04.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_05.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_06.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_07.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_08.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_09.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_10.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_11.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_12.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_13.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_14.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_15.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_16.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_17.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_18.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_19.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_20.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_21.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_22.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_23.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_24.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_25.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_26.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_27.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_28.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_29.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_30.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_31.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_32.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_33.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_34.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_35.gif" />
+    <Content Include="管理员模块\editor\plugins\emoticons\etc_36.gif" />
+    <Content Include="管理员模块\editor\plugins\flash.html" />
+    <Content Include="管理员模块\editor\plugins\image.html" />
+    <Content Include="管理员模块\editor\plugins\link.html" />
+    <Content Include="管理员模块\editor\plugins\media.html" />
+    <Content Include="管理员模块\editor\plugins\plainpaste.html" />
+    <Content Include="管理员模块\editor\plugins\remote_image.html" />
+    <Content Include="管理员模块\editor\plugins\wordpaste.html" />
+    <Content Include="管理员模块\editor\skins\default.css" />
+    <Content Include="管理员模块\editor\skins\default.gif" />
+    <Content Include="管理员模块\editor\skins\div.gif" />
+    <Content Include="管理员模块\editor\skins\dl.gif" />
+    <Content Include="管理员模块\editor\skins\editor.css" />
+    <Content Include="管理员模块\editor\skins\ol.gif" />
+    <Content Include="管理员模块\editor\skins\p.gif" />
+    <Content Include="管理员模块\editor\skins\tinymce.css" />
+    <Content Include="管理员模块\editor\skins\tinymce.gif" />
+    <Content Include="管理员模块\editor\skins\ul.gif" />
+    <Content Include="管理员模块\error.html" />
+    <Content Include="管理员模块\filelist.html" />
+    <Content Include="管理员模块\form.html" />
+    <Content Include="管理员模块\images\001.jpg" />
+    <Content Include="管理员模块\images\404.png" />
+    <Content Include="管理员模块\images\add.png" />
+    <Content Include="管理员模块\images\btnbg.png" />
+    <Content Include="管理员模块\images\btnbg1.png" />
+    <Content Include="管理员模块\images\btnbg2.png" />
+    <Content Include="管理员模块\images\buttonbg.png" />
+    <Content Include="管理员模块\images\c01.png" />
+    <Content Include="管理员模块\images\c02.png" />
+    <Content Include="管理员模块\images\c03.png" />
+    <Content Include="管理员模块\images\cbg.png" />
+    <Content Include="管理员模块\images\clist.png" />
+    <Content Include="管理员模块\images\close.png" />
+    <Content Include="管理员模块\images\close1.png" />
+    <Content Include="管理员模块\images\cloud.png" />
+    <Content Include="管理员模块\images\d01.png" />
+    <Content Include="管理员模块\images\d02.png" />
+    <Content Include="管理员模块\images\d03.png" />
+    <Content Include="管理员模块\images\d04.png" />
+    <Content Include="管理员模块\images\d05.png" />
+    <Content Include="管理员模块\images\d06.png" />
+    <Content Include="管理员模块\images\d07.png" />
+    <Content Include="管理员模块\images\diskbg.png" />
+    <Content Include="管理员模块\images\dp.png" />
+    <Content Include="管理员模块\images\f01.png" />
+    <Content Include="管理员模块\images\f02.png" />
+    <Content Include="管理员模块\images\f03.png" />
+    <Content Include="管理员模块\images\f04.png" />
+    <Content Include="管理员模块\images\f05.png" />
+    <Content Include="管理员模块\images\f06.png" />
+    <Content Include="管理员模块\images\help.png" />
+    <Content Include="管理员模块\images\i01.png" />
+    <Content Include="管理员模块\images\i02.png" />
+    <Content Include="管理员模块\images\i03.png" />
+    <Content Include="管理员模块\images\i04.png" />
+    <Content Include="管理员模块\images\i05.png" />
+    <Content Include="管理员模块\images\i06.png" />
+    <Content Include="管理员模块\images\i07.png" />
+    <Content Include="管理员模块\images\i08.png" />
+    <Content Include="管理员模块\images\i09.png" />
+    <Content Include="管理员模块\images\iadd.png" />
+    <Content Include="管理员模块\images\ibtnbg.png" />
+    <Content Include="管理员模块\images\ico01.png" />
+    <Content Include="管理员模块\images\ico02.png" />
+    <Content Include="管理员模块\images\ico03.png" />
+    <Content Include="管理员模块\images\ico04.png" />
+    <Content Include="管理员模块\images\ico05.png" />
+    <Content Include="管理员模块\images\ico06.png" />
+    <Content Include="管理员模块\images\icon01.png" />
+    <Content Include="管理员模块\images\icon02.png" />
+    <Content Include="管理员模块\images\icon03.png" />
+    <Content Include="管理员模块\images\icon04.png" />
+    <Content Include="管理员模块\images\icon05.png" />
+    <Content Include="管理员模块\images\icon06.png" />
+    <Content Include="管理员模块\images\img01.png" />
+    <Content Include="管理员模块\images\img02.png" />
+    <Content Include="管理员模块\images\img03.png" />
+    <Content Include="管理员模块\images\img04.png" />
+    <Content Include="管理员模块\images\img05.png" />
+    <Content Include="管理员模块\images\img06.png" />
+    <Content Include="管理员模块\images\img07.png" />
+    <Content Include="管理员模块\images\img08.png" />
+    <Content Include="管理员模块\images\img09.png" />
+    <Content Include="管理员模块\images\img10.png" />
+    <Content Include="管理员模块\images\img11.png" />
+    <Content Include="管理员模块\images\img12.png" />
+    <Content Include="管理员模块\images\img13.png" />
+    <Content Include="管理员模块\images\img14.png" />
+    <Content Include="管理员模块\images\img15.png" />
+    <Content Include="管理员模块\images\inputbg.gif" />
+    <Content Include="管理员模块\images\itabbg.png" />
+    <Content Include="管理员模块\images\itabbg1.png" />
+    <Content Include="管理员模块\images\leftico.png" />
+    <Content Include="管理员模块\images\leftico01.png" />
+    <Content Include="管理员模块\images\leftico02.png" />
+    <Content Include="管理员模块\images\leftico03.png" />
+    <Content Include="管理员模块\images\leftico04.png" />
+    <Content Include="管理员模块\images\leftline.gif" />
+    <Content Include="管理员模块\images\leftmenubg.gif" />
+    <Content Include="管理员模块\images\lefttop.gif" />
+    <Content Include="管理员模块\images\libg.png" />
+    <Content Include="管理员模块\images\light.png" />
+    <Content Include="管理员模块\images\line.gif" />
+    <Content Include="管理员模块\images\line1.png" />
+    <Content Include="管理员模块\images\list.gif" />
+    <Content Include="管理员模块\images\list1.gif" />
+    <Content Include="管理员模块\images\list2.png" />
+    <Content Include="管理员模块\images\loginbg1.png" />
+    <Content Include="管理员模块\images\loginbg2.png" />
+    <Content Include="管理员模块\images\loginbg3.png" />
+    <Content Include="管理员模块\images\logininfo.png" />
+    <Content Include="管理员模块\images\loginlogo.png" />
+    <Content Include="管理员模块\images\loginpassword.png" />
+    <Content Include="管理员模块\images\loginsj.png" />
+    <Content Include="管理员模块\images\loginuser.png" />
+    <Content Include="管理员模块\images\msg.png" />
+    <Content Include="管理员模块\images\navbg.png" />
+    <Content Include="管理员模块\images\next.gif" />
+    <Content Include="管理员模块\images\pre.gif" />
+    <Content Include="管理员模块\images\px.gif" />
+    <Content Include="管理员模块\images\righttop.gif" />
+    <Content Include="管理员模块\images\rlist.gif" />
+    <Content Include="管理员模块\images\search.png" />
+    <Content Include="管理员模块\images\sj.png" />
+    <Content Include="管理员模块\images\sun.png" />
+    <Content Include="管理员模块\images\t01.png" />
+    <Content Include="管理员模块\images\t02.png" />
+    <Content Include="管理员模块\images\t03.png" />
+    <Content Include="管理员模块\images\t04.png" />
+    <Content Include="管理员模块\images\t05.png" />
+    <Content Include="管理员模块\images\tbg.png" />
+    <Content Include="管理员模块\images\tcbg.gif" />
+    <Content Include="管理员模块\images\th.gif" />
+    <Content Include="管理员模块\images\ticon.png" />
+    <Content Include="管理员模块\images\time.png" />
+    <Content Include="管理员模块\images\toolbg.gif" />
+    <Content Include="管理员模块\images\topbg.gif" />
+    <Content Include="管理员模块\images\topleft.jpg" />
+    <Content Include="管理员模块\images\topright.jpg" />
+    <Content Include="管理员模块\images\ub1.png" />
+    <Content Include="管理员模块\images\uew_icon.png" />
+    <Content Include="管理员模块\images\uew_icon_hover.png" />
+    <Content Include="管理员模块\images\ulist.png" />
+    <Content Include="管理员模块\images\user.png" />
+    <Content Include="管理员模块\images\userbg.png" />
+    <Content Include="管理员模块\imglist.html" />
+    <Content Include="管理员模块\imglist1.html" />
+    <Content Include="管理员模块\imgtable.html" />
+    <Content Include="管理员模块\index.html" />
+    <Content Include="管理员模块\js\AlterPwd.js" />
+    <Content Include="管理员模块\js\BookList.js" />
+    <Content Include="管理员模块\js\cloud.js" />
+    <Content Include="管理员模块\js\format+zh_CN,default,corechart.I.js" />
+    <Content Include="管理员模块\js\jquery.ba-resize.min.js" />
+    <Content Include="管理员模块\js\jquery.gvChart-1.0.1.min.js" />
+    <Content Include="管理员模块\js\jquery.idTabs.min.js" />
+    <Content Include="管理员模块\js\jquery.js" />
+    <Content Include="管理员模块\js\jsapi.js" />
+    <Content Include="管理员模块\js\main.js" />
+    <Content Include="管理员模块\js\PIE.htc" />
+    <Content Include="管理员模块\js\ReaplyAppointment.js" />
+    <Content Include="管理员模块\js\right.js" />
+    <Content Include="管理员模块\js\select-ui.min.js" />
+    <Content Include="管理员模块\js\top.js" />
+    <Content Include="管理员模块\js\UpdateManage.js" />
+    <Content Include="管理员模块\Manage.htm" />
+    <Content Include="管理员模块\ManagementList.htm" />
+    <Content Include="管理员模块\UpdateAnnunciate.htm" />
+    <Content Include="管理员模块\js\UpdateAnnunciate.js" />
+    <Content Include="管理员模块\js\UpdateBook.js" />
+    <Content Include="管理员模块\js\UpdateReader.js" />
+    <Content Include="管理员模块\left.html" />
+    <Content Include="管理员模块\login.html" />
+    <Content Include="管理员模块\main.html" />
+    <Content Include="管理员模块\Reader.htm" />
+    <Content Include="管理员模块\ReaderList.htm" />
+    <Content Include="管理员模块\ReplyAppointment.htm" />
+    <Content Include="管理员模块\right.html" />
+    <Content Include="管理员模块\src\jquery.gvChart-1.0.1.js" />
+    <Content Include="管理员模块\tab.html" />
+    <Content Include="管理员模块\tools.html" />
+    <Content Include="管理员模块\top.html" />
+    <Content Include="管理员模块\UpdateBook.htm" />
+    <Content Include="管理员模块\UpdateManage.htm" />
+    <Content Include="管理员模块\UpdateReader.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Handlers\DeleteAnnunciate.ashx.cs">
+      <DependentUpon>DeleteAnnunciate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\DeleteAppointment.ashx.cs">
+      <DependentUpon>DeleteAppointment.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\DeleteBook.ashx.cs">
+      <DependentUpon>DeleteBook.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\DeleteBookType.ashx.cs">
+      <DependentUpon>DeleteBookType.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\DeleteCase.ashx.cs">
+      <DependentUpon>DeleteCase.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\DeleteManagement.ashx.cs">
+      <DependentUpon>DeleteManagement.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\DeleteUser.ashx.cs">
+      <DependentUpon>DeleteUser.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\InsertAnnunciate.ashx.cs">
+      <DependentUpon>InsertAnnunciate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\InsertAppointment.ashx.cs">
+      <DependentUpon>InsertAppointment.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\InsertBook.ashx.cs">
+      <DependentUpon>InsertBook.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\InsertBookType.ashx.cs">
+      <DependentUpon>InsertBookType.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\InsertBorrow.ashx.cs">
+      <DependentUpon>InsertBorrow.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\InsertCase.ashx.cs">
+      <DependentUpon>InsertCase.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\InsertManagement.ashx.cs">
+      <DependentUpon>InsertManagement.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\InsertReturn.ashx.cs">
+      <DependentUpon>InsertReturn.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\InsertUser.ashx.cs">
+      <DependentUpon>InsertUser.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\SelectAnnunciate.ashx.cs">
+      <DependentUpon>SelectAnnunciate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\SelectAppointment.ashx.cs">
+      <DependentUpon>SelectAppointment.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\SelectBook.ashx.cs">
+      <DependentUpon>SelectBook.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\SelectBookType.ashx.cs">
+      <DependentUpon>SelectBookType.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\SelectBorrow.ashx.cs">
+      <DependentUpon>SelectBorrow.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\SelectCase.ashx.cs">
+      <DependentUpon>SelectCase.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\SelectManage.ashx.cs">
+      <DependentUpon>SelectManage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\SelectManagementPage.ashx.cs">
+      <DependentUpon>SelectManagementPage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\SelectTop15Book.ashx.cs">
+      <DependentUpon>SelectTop15Book.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\SelectUser.ashx.cs">
+      <DependentUpon>SelectUser.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\UpdateAnnunciate.ashx.cs">
+      <DependentUpon>UpdateAnnunciate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\UpdateAnnunciateDisplay.ashx.cs">
+      <DependentUpon>UpdateAnnunciateDisplay.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\UpdateAppointment.ashx.cs">
+      <DependentUpon>UpdateAppointment.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\UpdateBook.ashx.cs">
+      <DependentUpon>UpdateBook.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\UpdateBookLogout.ashx.cs">
+      <DependentUpon>UpdateBookLogout.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\UpdateBorrowCost.ashx.cs">
+      <DependentUpon>UpdateBorrowCost.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\UpdateBorrowRenew.ashx.cs">
+      <DependentUpon>UpdateBorrowRenew.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\UpdateManagement.ashx.cs">
+      <DependentUpon>UpdateManagement.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\UpdateManagementPWD.ashx.cs">
+      <DependentUpon>UpdateManagementPWD.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\UpdateUser.ashx.cs">
+      <DependentUpon>UpdateUser.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\UpdateUserLoss.ashx.cs">
+      <DependentUpon>UpdateUserLoss.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Handlers\InsertUser.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibraryBLL\LibraryBLL.csproj">
+      <Project>{3EA6DBE3-4FAA-4EE6-BA6D-6AE7B2CFBCCF}</Project>
+      <Name>LibraryBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibraryDAL\LibraryDAL.csproj">
+      <Project>{9BF8A0D3-B4D2-4AC5-BA30-8B660C4B2C8F}</Project>
+      <Name>LibraryDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibraryModel\LibraryModel.csproj">
+      <Project>{35E8D146-BB7A-46C6-A28F-AA23A1EBFBBE}</Project>
+      <Name>LibraryModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Handlers\InsertManagement.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Handlers\SelectUser.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Handlers\SelectManage.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Handlers\SelectBook.ashx" />
+    <Content Include="Handlers\InsertBook.ashx" />
+    <Content Include="Handlers\DeleteBook.ashx" />
+    <Content Include="Handlers\UpdateBook.ashx" />
+    <Content Include="Handlers\DeleteUser.ashx" />
+    <Content Include="Handlers\UpdateUser.ashx" />
+    <Content Include="Handlers\InsertAppointment.ashx" />
+    <Content Include="Handlers\SelectAppointment.ashx" />
+    <Content Include="Handlers\DeleteAppointment.ashx" />
+    <Content Include="Handlers\UpdateAppointment.ashx" />
+    <Content Include="Handlers\InsertBorrow.ashx" />
+    <Content Include="Handlers\SelectBorrow.ashx" />
+    <Content Include="Handlers\InsertReturn.ashx" />
+    <Content Include="Handlers\SelectTop15Book.ashx" />
+    <Content Include="Handlers\InsertBookType.ashx" />
+    <Content Include="Handlers\SelectBookType.ashx" />
+    <Content Include="Handlers\DeleteBookType.ashx" />
+    <Content Include="Handlers\InsertCase.ashx" />
+    <Content Include="Handlers\SelectCase.ashx" />
+    <Content Include="Handlers\DeleteCase.ashx" />
+    <Content Include="Handlers\UpdateBorrowCost.ashx" />
+    <Content Include="Handlers\UpdateManagementPWD.ashx" />
+    <Content Include="Handlers\DeleteAnnunciate.ashx" />
+    <Content Include="Handlers\InsertAnnunciate.ashx" />
+    <Content Include="Handlers\SelectAnnunciate.ashx" />
+    <Content Include="Handlers\UpdateAnnunciate.ashx" />
+    <Content Include="Handlers\UpdateBorrowRenew.ashx" />
+    <Content Include="Handlers\SelectManagementPage.ashx" />
+    <Content Include="Handlers\DeleteManagement.ashx" />
+    <Content Include="Handlers\UpdateManagement.ashx" />
+    <Content Include="Handlers\UpdateBookLogout.ashx" />
+    <Content Include="Handlers\UpdateUserLoss.ashx" />
+    <Content Include="Handlers\UpdateAnnunciateDisplay.ashx" />
+    <None Include="jpaginate\jquery插件库.url" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6329</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
