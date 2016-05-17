@@ -31,3 +31,8 @@ F:\BaiduYunDownload\新建文件夹\Library\Library\Library\Library\LibraryDAL\b
 F:\BaiduYunDownload\新建文件夹\Library\Library\Library\Library\LibraryDAL\obj\Debug\LibraryDAL.dll
 F:\BaiduYunDownload\新建文件夹\Library\Library\Library\Library\LibraryDAL\obj\Debug\LibraryDAL.pdb
 F:\BaiduYunDownload\新建文件夹\Library\Library\Library\Library\LibraryDAL\obj\Debug\LibraryDAL.csprojResolveAssemblyReference.cache
+E:\Library\Library\LibraryDAL\bin\Debug\LibraryDAL.dll
+E:\Library\Library\LibraryDAL\bin\Debug\LibraryDAL.pdb
+E:\Library\Library\LibraryDAL\obj\Debug\LibraryDAL.csprojResolveAssemblyReference.cache
+E:\Library\Library\LibraryDAL\obj\Debug\LibraryDAL.dll
+E:\Library\Library\LibraryDAL\obj\Debug\LibraryDAL.pdb

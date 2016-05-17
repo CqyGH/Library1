@@ -39,3 +39,9 @@ F:\BaiduYunDownload\新建文件夹\Library\Library\Library\Library\LibraryModel
 F:\BaiduYunDownload\新建文件夹\Library\Library\Library\Library\LibraryModel\obj\Debug\LibraryModel.dll
 F:\BaiduYunDownload\新建文件夹\Library\Library\Library\Library\LibraryModel\obj\Debug\LibraryModel.pdb
 F:\BaiduYunDownload\新建文件夹\Library\Library\Library\Library\LibraryModel\obj\Debug\LibraryModel.csprojResolveAssemblyReference.cache
+E:\Library\Library\LibraryModel\bin\Debug\LibraryModel.dll
+E:\Library\Library\LibraryModel\bin\Debug\LibraryModel.pdb
+E:\Library\Library\LibraryModel\bin\Debug\Newtonsoft.Json.dll
+E:\Library\Library\LibraryModel\obj\Debug\LibraryModel.csprojResolveAssemblyReference.cache
+E:\Library\Library\LibraryModel\obj\Debug\LibraryModel.dll
+E:\Library\Library\LibraryModel\obj\Debug\LibraryModel.pdb

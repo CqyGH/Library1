@@ -137,5 +137,11 @@ function AlertManagementPWD() {
         }
     }
 
-   
+
+}
+
+
+
+function Abount() {
+    alert(" Copyright © 2016.陈清阳.毕业设计 All rights reserved");
 }

@@ -68,3 +68,13 @@ F:\BaiduYunDownload\新建文件夹\Library\Library\Library\Library\LibraryBLL\b
 F:\BaiduYunDownload\新建文件夹\Library\Library\Library\Library\LibraryBLL\obj\Debug\LibraryBLL.csprojResolveAssemblyReference.cache
 F:\BaiduYunDownload\新建文件夹\Library\Library\Library\Library\LibraryBLL\obj\Debug\LibraryBLL.dll
 F:\BaiduYunDownload\新建文件夹\Library\Library\Library\Library\LibraryBLL\obj\Debug\LibraryBLL.pdb
+E:\Library\Library\LibraryBLL\bin\Debug\LibraryBLL.dll
+E:\Library\Library\LibraryBLL\bin\Debug\LibraryBLL.pdb
+E:\Library\Library\LibraryBLL\bin\Debug\LibraryDAL.dll
+E:\Library\Library\LibraryBLL\bin\Debug\LibraryModel.dll
+E:\Library\Library\LibraryBLL\bin\Debug\Newtonsoft.Json.dll
+E:\Library\Library\LibraryBLL\bin\Debug\LibraryDAL.pdb
+E:\Library\Library\LibraryBLL\bin\Debug\LibraryModel.pdb
+E:\Library\Library\LibraryBLL\obj\Debug\LibraryBLL.csprojResolveAssemblyReference.cache
+E:\Library\Library\LibraryBLL\obj\Debug\LibraryBLL.dll
+E:\Library\Library\LibraryBLL\obj\Debug\LibraryBLL.pdb
