@@ -94,3 +94,14 @@ function userLogout() {
         window.parent.location.href = "main.html";
     }
 }
+
+
+
+function Abount() {
+    alert(" Copyright © 2016.陈清阳.毕业设计 All rights reserved");
+}
+
+
+function Help() {
+    alert("需要帮助请联系QQ：1183344265");
+}
